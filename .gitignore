@@ -1,2 +1,3 @@
 .idea/
 pri.py
+__pycache__/
