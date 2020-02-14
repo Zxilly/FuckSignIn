@@ -1,0 +1,30 @@
+loginname = ''
+yzxx = ''
+studentQd = {'xszt': '', 'lng': '', 'lat': '', 'province': '', 'city': '',
+             'district': '', 'street': ''}
+
+form_param = {
+    "name": "",
+    "xb": "",
+    "gtjzrysfyyshqzbl": "",
+    "xzzdsfyyqfbqy": "",
+    "jqsfqwzdyq": "",
+    "sfzyblbbdsq": "",
+    "sfyhqzbljcs": "",
+    "jrtw": "",
+    "sf": "",
+    "stype": "",
+    "xy": "",
+    "nj": "",
+    "bj": "",
+    "age": "",
+    "lxdh": "",
+    "jjdh": "",
+    "sfz": "",
+    "szd": "",
+    "address": "",
+    "hbc": "",
+    "hjtgj": "",
+    "sffx": "",
+    "jrjkzk": "",
+}
