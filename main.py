@@ -24,16 +24,21 @@ login_info = session.post('http://yqjk.jgsu.edu.cn:8090/public/getLoginInfoByLog
 login_info_dict = json.loads(login_info.content)
 sessionid = login_info.headers['Set-Cookie'].split(';')[0].split('=')[1]
 cookie['JSESSIONID'] = sessionid
-url = 'http://yqjk.jgsu.edu.cn:8090/public/homeQd?loginName='+loginname+'&loginType=0'
+url = 'http://yqjk.jgsu.edu.cn:8090/public/homeQd?loginName=' + loginname + '&loginType=0'
 login_main = session.get(url)
 studentQdQj = {'qjlx': '0', 'qjjzrq': ''}
 signin_param = {'studentQdQj': json.dumps(studentQdQj), 'studentQd': json.dumps(studentQd)}
-signin_post = session.post('http://yqjk.jgsu.edu.cn:8090/studentQd/qdStudentByXh', data=signin_param)
-print(signin_post.content.decode('utf-8'))
-form_post = session.post('http://yqjk.jgsu.edu.cn:8090/dcwjEditNew/dcwjSubmit2', data={'dcwj': json.dumps(form_param)})
-print(form_post.content.decode('utf-8'))
 
-#print(url)
+
+def signin_function():
+    signin_post = session.post('http://yqjk.jgsu.edu.cn:8090/studentQd/qdStudentByXh', data=signin_param)
+    print(signin_post.content.decode('utf-8'))
+    form_post = session.post('http://yqjk.jgsu.edu.cn:8090/dcwjEditNew/dcwjSubmit2',
+                             data={'dcwj': json.dumps(form_param)})
+    print(form_post.content.decode('utf-8'))
+
+
+# print(url)
 # print(quote(data_get_cookie['xxms']))
 # print(data_get.headers)
 # logininfo = http.request('POST', 'http://yqjk.jgsu.edu.cn:8090/public/getLoginInfoByLoginName', fields=loginparam)

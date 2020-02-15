@@ -1,7 +1,13 @@
 loginname = ''
 yzxx = ''
-studentQd = {'xszt': '', 'lng': '', 'lat': '', 'province': '', 'city': '',
-             'district': '', 'street': ''}
+studentQd = {'xszt': '',
+             'lng': '',
+             'lat': '',
+             'province': '',
+             'city': '',
+             'district': '',
+             'street': '',
+             }
 
 form_param = {
     "name": "",
